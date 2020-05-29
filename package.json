@@ -1,0 +1,30 @@
+{
+  "name": "TeamMusic",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "TeamMusic for PC",
+  "author": "zalnaRs <thezalnar@hotmail.com>",
+  "main": "main.js",
+  "homepage": "http://teammusic.web.app/",
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --linux"
+
+  },
+  "build": {
+    "appId": "tw.music.streamer",
+    "linux": {
+      "target": "appImage"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "^22.7.0"
+  }
+}
