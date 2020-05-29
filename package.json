@@ -10,16 +10,18 @@
     "postinstall": "install-app-deps",
     "start": "electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder --linux"
-
+    "win-dist": "electron-builder --win",
+    "linux-dist": "electron-builder --linux"
   },
   "build": {
     "appId": "tw.music.streamer",
     "linux": {
-      "target": "appImage"
+      "target": "deb"
     },
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+      "perMachine": "false",
+      "oneClick": "true"
     }
   },
   "dependencies": {},
