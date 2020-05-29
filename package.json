@@ -21,10 +21,12 @@
     "win": {
       "target": "nsis",
       "license": "assets/license.txt",
-      "multiLanguageInstaller": "false",
+      "multiLanguageInstaller": "false"
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "electron-updater": "^4.3.1"
+  },
   "devDependencies": {
     "electron": "latest",
     "electron-builder": "^22.7.0"
