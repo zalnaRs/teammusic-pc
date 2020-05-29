@@ -20,11 +20,7 @@
     },
     "win": {
       "target": "nsis"
-    },
-    "files": [
-      "assets/favicon.png",
-      "index.html/license.txt"
-  ]
+    }
   },
   "dependencies": {},
   "devDependencies": {
