@@ -19,10 +19,12 @@
       "target": "deb"
     },
     "win": {
-      "target": "nsis",
-      "license": "assets/license.txt",
-      "multiLanguageInstaller": "false"
-    }
+      "target": "nsis"
+    },
+    "files": [
+      "assets/favicon.png",
+      "index.html/license.txt"
+  ]
   },
   "dependencies": {},
   "devDependencies": {

@@ -8,7 +8,7 @@ function createWindow () {
     minWidth: 800,
     width: 800,
     height: 600,
-    title: "TeamMusic PC client",
+    title: "TeamMusic PC",
     webPreferences: {
       nodeIntegration: true,
       webviewTag: true,
