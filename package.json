@@ -20,8 +20,8 @@
     },
     "win": {
       "target": "nsis",
-      "perMachine": "false",
-      "oneClick": "true"
+      "license": "assets/license.txt",
+      "multiLanguageInstaller": "false",
     }
   },
   "dependencies": {},
