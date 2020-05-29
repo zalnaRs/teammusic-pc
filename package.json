@@ -24,9 +24,7 @@
       "multiLanguageInstaller": "false"
     }
   },
-  "dependencies": {
-    "electron-updater": "^4.3.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "electron": "latest",
     "electron-builder": "^22.7.0"
