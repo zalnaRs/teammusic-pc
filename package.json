@@ -11,7 +11,8 @@
     "start": "electron .",
     "pack": "electron-builder --dir",
     "win-dist": "electron-builder --win",
-    "linux-dist": "electron-builder --linux"
+    "linux-dist": "electron-builder --linux",
+    "mac-dist": "electron-builder --mac"
   },
   "build": {
     "appId": "tw.music.streamer",
