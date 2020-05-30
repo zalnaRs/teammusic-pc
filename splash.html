@@ -4,14 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeamMusic PC</title>
+    <link rel="stylesheet" href="./node_modules/material-design-lite/material.min.css">
+<script src="./node_modules/material-design-lite/material.min.js"></script>
+<link rel="stylesheet" href="materialcolor.css">
+<link rel="stylesheet" href="style.css">
 </head>
+<style>
+    .spinner {
+        width: 100px;
+        height: 100px;
+    }
+</style>
 <body>
+    <script>
+        var timeout = Math.floor(Math.random() * 6) + 2;
 
-<div class="mdc-circular-progress mdc-circular-progress--large" role="progressbar" aria-label="Example Progress Bar" aria-valuemin="0" aria-valuemax="1">
-    <div class="mdc-circular-progress__determinate-container">
-      <svg class="mdc-circular-progress__determinate-circle-graphic" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-        <circle class="mdc-circular-progress__determinate-circle" cx="24" cy="24" r="18" stroke-dasharray="113.097" stroke-dashoffset="113.097"/>
-      </svg>
+        setTimeout(function () {
+            this.document.location.href = 'index.html';
+    }, timeout);
+    </script>
+    
+    <div class="center"><img style="position: absolute;" src="./assets/favicon.png" width="100px" height="100px"> <div class=" spinner mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
     </div>
+   
 </body>
 </html>
