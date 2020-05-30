@@ -4,6 +4,7 @@
   "license": "MIT",
   "description": "TeamMusic for PC",
   "author": "zalnaRs <thezalnar@hotmail.com>",
+  "release": "build",
   "main": "main.js",
   "homepage": "http://teammusic.web.app/",
   "scripts": {
@@ -12,7 +13,8 @@
     "pack": "electron-builder --dir",
     "win-dist": "electron-builder --win",
     "linux-dist": "electron-builder --linux",
-    "mac-dist": "electron-builder --mac"
+    "mac-dist": "electron-builder --mac",
+    "dist": "electron-builder --publish always"
   },
   "build": {
     "appId": "tw.music.streamer",
@@ -21,7 +23,15 @@
     },
     "win": {
       "target": "nsis"
-    }
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "zalnaRs",
+        "repo": "https://github.com/zalnaRs/teammusic-pc",
+        "publishAutoUpdate": "true"
+      }
+    ]
   },
   "dependencies": {},
   "devDependencies": {
