@@ -35,7 +35,7 @@ body {
   transition: background 0.8s;
 }
 .ripple:hover {
-  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+  background: #413E3D radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
 }
 .ripple:active {
   background-color: #6eb9f7;
@@ -52,7 +52,7 @@ body {
   text-transform: uppercase;
   cursor: pointer;
   color: white;
-  background-color: #2196f3;
+  background-color: transparent;
   box-shadow: 0 0 4px #999;
   outline: none;
   margin-left: 40px;
@@ -75,12 +75,13 @@ body {
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #1E1D1D;
+        color: whitesmoke;
     }
 }
 
 @media (prefers-color-scheme: light) {
     body {
         background-color: #E7DFDE;
-        color: whitesmoke;
+        color: black;
     }
 }

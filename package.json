@@ -29,7 +29,8 @@
         "provider": "github",
         "owner": "zalnaRs",
         "repo": "https://github.com/zalnaRs/teammusic-pc",
-        "publishAutoUpdate": "true"
+        "publishAutoUpdate": "true",
+        "private": "true"
       }
     ]
   },
