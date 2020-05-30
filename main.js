@@ -20,7 +20,7 @@ win.loadFile('splash.html');
 
 win.removeMenu();
 
-win.openDevTools();
+//win.openDevTools();
 }
 
 app.whenReady().then(createWindow)
