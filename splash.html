@@ -16,16 +16,38 @@
     }
 </style>
 <body>
-    <script>
-        var timeout = Math.floor(Math.random() * 6) + 2;
+    <div class="center"><img style="position: absolute;" src="./assets/favicon.png" width="100px" height="100px"> <div class=" spinner mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active">
+        
+    </div>
+    <div style="position: absolute; bottom: 5px; text-align: center;">
+        <p style=" font-weight: 300; color: rgb(145, 145, 145); font-size: 10px;">0.0.1-BETA</p>
+        <p style=" font-weight: 300; color: rgb(145, 145, 145); font-size: 10px;">2020_5_30</p>
+        <p style=" font-weight: 300; color: rgb(145, 145, 145); font-size: 10px;" id="os"></p>
+     </div>
+   
+     <script>
+        var timeout = Math.floor(Math.random() * 6000) + 3000;
+
+        var a = 0;
+
+        var os = require('os');
+
+        var kernel = os.platform();
+
+        var arch = os.arch();
+
+        var mbTotal = ((os.totalmem())/1048576);
+
+        var mbFree = ((os.freemem())/1048576);
+
+        var info = kernel + " " + arch + " " + mbFree + "mb" + "/" + mbTotal + "mb";
+
+        document.getElementById('os').innerHTML = info; 
 
         setTimeout(function () {
-            this.document.location.href = 'index.html';
-    }, timeout);
+                a -= 1;
+                this.document.location.href = 'index.html';
+            }, timeout);
     </script>
-    
-    <div class="center"><img style="position: absolute;" src="./assets/favicon.png" width="100px" height="100px"> <div class=" spinner mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
-    </div>
-   
 </body>
 </html>
