@@ -37,3 +37,15 @@ app.on('activate', () => {
 
     }
 })
+
+const client = require('discord-rich-presence')('716528465494540308');
+
+client.updatePresence({
+    state: 'TeamMusic',
+    details: 'Listening music on TeamMusic',
+    startTimestamp: Date.now(),
+    endTimestamp: Date.now() + 1337,
+    largeImageKey: './assets/favicon.png',
+    smallImageKey: './assets/favicon.png',
+    instance: true,
+});

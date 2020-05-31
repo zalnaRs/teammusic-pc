@@ -12,66 +12,33 @@
 </head>
 
 <body>
-    <div style="background-color: transparent;" class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header style="background-color: transparent;" class="mdl-layout__header">
-
-
-
-            <!-- Tabs -->
-            <div style="background-color: transparent;" class="mdl-layout__tab-bar mdl-js-ripple-effect">
-                <img id="demo" width="50px" height="50px" style="color: white;" src="./assets/arrow_back-white-18dp.svg">
-                <a style="color: white;background-color: transparent;" href="#scroll-tab-1" class="mdl-layout__tab is-active">tab 1 </a>
-                <a style="color: white;background-color: transparent;" href="#scroll-tab-2" class="mdl-layout__tab">Tab 2</a>
-                <a style="color: white;background-color: transparent;" href="#scroll-tab-3" class="mdl-layout__tab">Tab 3</a>
-                <a style="color: white;background-color: transparent;" href="#scroll-tab-4" class="mdl-layout__tab">Tab 4</a>
-                <a style="color: white;background-color: transparent;" href="#scroll-tab-5" class="mdl-layout__tab">Tab 5</a>
-                <a style="color: white;background-color: transparent;" href="#scroll-tab-6" class="mdl-layout__tab">About</a>
-            </div>
-        </header>
-        <main style="background-color: transparent;" class="mdl-layout__content">
-            <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
-                <div style="background-color: transparent;" class="page-content">
-                    <!-- Your content goes here -->
-                </div>
-            </section>
-            <section class="mdl-layout__tab-panel" id="scroll-tab-2">
-                <div style="background-color: transparent;" class="page-content">
-                    <!-- Your content goes here -->
-                </div>
-            </section>
-            <section class="mdl-layout__tab-panel" id="scroll-tab-3">
-                <div class="page-content">
-                    <!-- Your content goes here -->
-                </div>
-            </section>
-            <section class="mdl-layout__tab-panel" id="scroll-tab-4">
-                <div class="page-content">
-                    <!-- Your content goes here -->
-                </div>
-            </section>
-            <section class="mdl-layout__tab-panel" id="scroll-tab-5">
-                <div class="page-content">
-                    <!-- Your content goes here -->
-                </div>
-            </section>
-            <section class="mdl-layout__tab-panel" id="scroll-tab-6">
-                <div class="page-content">
-
-                    <div class="center">
-                        <img src="./assets/favicon.png" style="margin-bottom: 30px;" width="100px" height="100px">
-                        <p style="color: aqua; font-weight: 200; font-size: 20px;">TeamMusic</p>
-                        <p>TeamMusic is the best music streaming service built by TeamWorks DEV.</p>
-                        <p>Desktop client created by: zalnaRs</p>
-                        <button style="background-color: transparent;" onclick="github()"><img src="./assets/github.png" width="50px" height="50px"></button>
-                        <p>0.0.1-BETA</p>
-                        <p>2020_5_30</p>
-                        <p id="os"></p>
-                    </div>
-                </div>
-            </section>
-        </main>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'tab 1')">tab 1</button>
+        <button class="tablinks" onclick="openTab(event, 'tab 2')">tab 2</button>
+        <button class="tablinks" onclick="openTab(event, 'About')">About</button>
+    </div>
+    <div id="tab 1" class="tabcontent">
+        <h3>London</h3>
+        <p>London is the capital city of England.</p>
     </div>
 
+    <div id="tab 2" class="tabcontent">
+        <h3>Paris</h3>
+        <p>Paris is the capital of France.</p>
+    </div>
+
+    <div id="About" class="tabcontent">
+
+        <img src="./assets/favicon.png" style="margin-bottom: 30px;" width="100px" height="100px">
+        <p style="color: aqua; font-weight: 200; font-size: 20px;">TeamMusic</p>
+        <p>TeamMusic is the best music streaming service built by TeamWorks DEV.</p>
+        <p>Desktop client created by: zalnaRs</p>
+        <button style="background-color: transparent;" onclick="github()"><img src="./assets/github.png" width="50px" height="50px"></button>
+        <p>0.0.1-BETA</p>
+        <p>2020_5_30</p>
+        <p id="os"></p>
+
+    </div>
     <script>
         var os = require('os');
 
@@ -93,15 +60,23 @@
             window.open('http://github.com/zalnaRs/teammusic-pc', '_blank', 'nodeIntegration=no');
         }
 
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
 
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
 
-        document.getElementById("demo").addEventListener("click", relaunch);
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
 
-        function relaunch() {
-            console.log("asd")
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
         }
     </script>
-
 </body>
 
 </html>
