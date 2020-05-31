@@ -58,6 +58,7 @@ body {
   margin-left: 40px;
   margin-right: 40px;
   text-decoration: none;
+  margin-bottom: 20px;
 }
 
 .content {
@@ -71,7 +72,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 20px;
 }
 
 @media (prefers-color-scheme: dark) {
