@@ -28,6 +28,7 @@
         {
           "target": "nsis",
           "arch": [
+            "x64",
             "ia32"
           ]
         }
@@ -40,6 +41,7 @@
     "electron-builder-squirrel-windows": "^22.7.0"
   },
   "dependencies": {
+    "discord-rich-presence": "0.0.8",
     "material-design-lite": "^1.3.0"
   }
 }

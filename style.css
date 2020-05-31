@@ -23,7 +23,7 @@ body {
 }
 
 .webview {
-    margin: 0;
+    margin: 10px;
     padding: 0;
     width: 100vh;
     width: 100%;
@@ -38,7 +38,7 @@ body {
   background: #413E3D radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
 }
 .ripple:active {
-  background-color: #6eb9f7;
+  background-color: #413E3D;
   background-size: 100%;
   transition: background 0s;
 }

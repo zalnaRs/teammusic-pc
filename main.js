@@ -19,7 +19,6 @@ function createWindow () {
 win.loadFile('splash.html');
 
 win.removeMenu();
-
 }
 
 app.whenReady().then(createWindow)
@@ -33,5 +32,7 @@ app.on('window-all-closed', () => {
 app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow()
+    
   }
 })
+

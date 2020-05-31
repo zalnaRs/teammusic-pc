@@ -32,15 +32,17 @@
 
         var os = require('os');
 
-        var kernel = os.platform();
+        var kernel = os.type();
+
+        var osinfo = os.platform();
 
         var arch = os.arch();
 
-        var mbTotal = ((os.totalmem())/1048576);
+        var mbTotal = (os.totalmem());
 
-        var mbFree = ((os.freemem())/1048576);
+        var mbFree = (os.freemem);
 
-        var info = kernel + " " + arch + " " + mbFree + "mb" + "/" + mbTotal + "mb";
+        var info = kernel + " " + osinfo + " " + arch + " " + mbFree + "/" + mbTotal;
 
         document.getElementById('os').innerHTML = info; 
 
