@@ -1,23 +1,36 @@
-TeamMusic PC Client
 
-How to use?
+# TeamMusic PC Client
 
-Download nodejs.
+## How to use?
 
-run these commands:
+- Download nodejs.
 
-npm install
+- Clone the git repository
 
-yarn
+- Change your directory to teammusic-pc
 
-npm start
+- Run `npm install`
 
-to build:
+- Run `yarn`
 
-npm run win-dist
+- Run `npm start` to start the electron application
 
-npm run linux-dist
+## How to Build the app?
+### Windows :
+    npm run win-dist
+    
+### Linux :
+    npm run linux-dist
 
-npm run mac-dist
+### Mac OS :
+    npm run mac-dist
+    
+### Run your build :
+    npm run dist
 
-npm run dist
+# To-Do Lists
+
+ - [X] Insert something
+ - [ ] Insert something
+ - [X] Insert something
+ - [ ] Insert something
