@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeamMusic PC</title>
     <link rel="stylesheet" href="./node_modules/material-design-lite/material.min.css">
-<script src="./node_modules/material-design-lite/material.min.js"></script>
-<link rel="stylesheet" href="materialcolor.css">
-<link rel="stylesheet" href="style.css">
+    <script src="./node_modules/material-design-lite/material.min.js"></script>
+    <link rel="stylesheet" href="materialcolor.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <style>
     .spinner {
@@ -15,41 +16,44 @@
         height: 100px;
     }
 </style>
+
 <body>
-    <div class="center"><img style="position: absolute;" src="./assets/favicon.png" width="100px" height="100px"> <div class=" spinner mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active">
-        
-    </div>
-    <div style="position: absolute; bottom: 5px; text-align: center;">
-        <p style=" font-weight: 300; color: rgb(145, 145, 145); font-size: 10px;">0.0.1-BETA</p>
-        <p style=" font-weight: 300; color: rgb(145, 145, 145); font-size: 10px;">2020_5_30</p>
-        <p style=" font-weight: 300; color: rgb(145, 145, 145); font-size: 10px;" id="os"></p>
-     </div>
-   
-     <script>
-        var timeout = Math.floor(Math.random() * 6000) + 3000;
+    <div class="center"><img style="position: absolute;" src="./assets/favicon.png" width="100px" height="100px">
+        <div class=" spinner mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active">
 
-        var a = 0;
+        </div>
+        <div style="position: absolute; bottom: 5px; text-align: center;">
+            <p style=" font-weight: 300; color: rgb(145, 145, 145); font-size: 10px;">0.0.1-BETA</p>
+            <p style=" font-weight: 300; color: rgb(145, 145, 145); font-size: 10px;">2020_5_30</p>
+            <p style=" font-weight: 300; color: rgb(145, 145, 145); font-size: 10px;" id="os"></p>
+        </div>
 
-        var os = require('os');
+        <script>
+            var timeout = Math.floor(Math.random() * 6000) + 3000;
 
-        var kernel = os.type();
+            var a = 0;
 
-        var osinfo = os.platform();
+            var os = require('os');
 
-        var arch = os.arch();
+            var kernel = os.type();
 
-        var mbTotal = (os.totalmem());
+            var osinfo = os.platform();
 
-        var mbFree = (os.freemem);
+            var arch = os.arch();
 
-        var info = kernel + " " + osinfo + " " + arch + " " + mbFree + "/" + mbTotal;
+            var mbTotal = (os.totalmem());
 
-        document.getElementById('os').innerHTML = info; 
+            var mbFree = (os.freemem);
 
-        setTimeout(function () {
+            var info = kernel + " " + osinfo + " " + arch + " " + mbFree + "/" + mbTotal;
+
+            document.getElementById('os').innerHTML = info;
+
+            setTimeout(function() {
                 a -= 1;
                 this.document.location.href = 'index.html';
             }, timeout);
-    </script>
+        </script>
 </body>
+
 </html>

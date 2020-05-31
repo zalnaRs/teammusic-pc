@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeamMusic PC</title>
+    <link rel="stylesheet" href="./node_modules/material-design-lite/material.min.css">
+    <script src="./node_modules/material-design-lite/material.min.js"></script>
+    <link rel="stylesheet" href="materialcolor2.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div style="background-color: transparent;" class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header style="background-color: transparent;" class="mdl-layout__header">
+
+
+
+            <!-- Tabs -->
+            <div style="background-color: transparent;" class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                <img id="demo" width="50px" height="50px" style="color: white;" src="./assets/arrow_back-white-18dp.svg">
+                <a style="color: white;background-color: transparent;" href="#scroll-tab-1" class="mdl-layout__tab is-active">tab 1 </a>
+                <a style="color: white;background-color: transparent;" href="#scroll-tab-2" class="mdl-layout__tab">Tab 2</a>
+                <a style="color: white;background-color: transparent;" href="#scroll-tab-3" class="mdl-layout__tab">Tab 3</a>
+                <a style="color: white;background-color: transparent;" href="#scroll-tab-4" class="mdl-layout__tab">Tab 4</a>
+                <a style="color: white;background-color: transparent;" href="#scroll-tab-5" class="mdl-layout__tab">Tab 5</a>
+                <a style="color: white;background-color: transparent;" href="#scroll-tab-6" class="mdl-layout__tab">About</a>
+            </div>
+        </header>
+        <main style="background-color: transparent;" class="mdl-layout__content">
+            <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+                <div style="background-color: transparent;" class="page-content">
+                    <!-- Your content goes here -->
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+                <div style="background-color: transparent;" class="page-content">
+                    <!-- Your content goes here -->
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-4">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-5">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-6">
+                <div class="page-content">
+
+                    <div class="center">
+                        <img src="./assets/favicon.png" style="margin-bottom: 30px;" width="100px" height="100px">
+                        <p style="color: aqua; font-weight: 200; font-size: 20px;">TeamMusic</p>
+                        <p>TeamMusic is the best music streaming service built by TeamWorks DEV.</p>
+                        <p>Desktop client created by: zalnaRs</p>
+                        <button style="background-color: transparent;" onclick="github()"><img src="./assets/github.png" width="50px" height="50px"></button>
+                        <p>0.0.1-BETA</p>
+                        <p>2020_5_30</p>
+                        <p id="os"></p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        var os = require('os');
+
+        var kernel = os.type();
+
+        var osinfo = os.platform();
+
+        var arch = os.arch();
+
+        var mbTotal = (os.totalmem());
+
+        var mbFree = (os.freemem);
+
+        var info = kernel + " " + osinfo + " " + arch + " " + mbFree + "/" + mbTotal;
+
+        document.getElementById('os').innerHTML = info;
+
+        function github() {
+            window.open('http://github.com/zalnaRs/teammusic-pc', '_blank', 'nodeIntegration=no');
+        }
+
+
+
+        document.getElementById("demo").addEventListener("click", relaunch);
+
+        function relaunch() {
+            console.log("asd")
+        }
+    </script>
+
+</body>
+
+</html>

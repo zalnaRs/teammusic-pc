@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeamMusic PC</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="menu">
         <a class="ripple button" onclick="goTo('license.html')">License</a>
         <a class="ripple button" onclick="load('http://teammusic.web.app/music.html')">Libary</a>
-        <a class="ripple button" href="license.html">Favorites</a>
+        <a class="ripple button">Favorites</a>
         <a class="ripple button" href="license.html">Playlists</a>
-        <a class="ripple button" href="license.html">Settings</a>
+        <a class="ripple button" href="settings.html">Settings</a>
     </div>
-    <div class="content">    <webview class="webview" id="web" src="http://teammusic.web.app/music.html"></webview></div>
+    <div class="content">
+        <webview class="webview" id="web" src="http://teammusic.web.app/music.html"></webview>
+    </div>
     <script src="app.js"></script>
 </body>
+
 </html>
