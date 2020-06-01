@@ -1,47 +1,48 @@
 {
-  "name": "TeamMusic",
-  "version": "0.0.1",
-  "license": "MIT",
-  "description": "TeamMusic for PC",
-  "author": "zalnaRs <thezalnar@hotmail.com>",
-  "release": "build",
-  "main": "main.js",
-  "homepage": "http://teammusic.web.app/",
-  "scripts": {
-    "postinstall": "install-app-deps",
-    "start": "electron .",
-    "pack": "electron-builder --dir",
-    "win-dist": "electron-builder --win",
-    "linux-dist": "electron-builder --linux",
-    "mac-dist": "electron-builder --mac",
-    "dist": "electron-builder --publish always"
-  },
-  "build": {
-    "appId": "tw.music.streamer",
-    "linux": {
-      "target": "deb",
-      "icon": "build/icon.png"
+    "name": "TeamMusic",
+    "version": "0.0.1",
+    "license": "MIT",
+    "description": "TeamMusic for PC",
+    "author": "zalnaRs <thezalnar@hotmail.com>",
+    "release": "build",
+    "main": "main.js",
+    "homepage": "http://teammusic.web.app/",
+    "scripts": {
+        "postinstall": "install-app-deps",
+        "start": "electron .",
+        "pack": "electron-builder --dir",
+        "win-dist": "electron-builder --win",
+        "linux-dist": "electron-builder --linux",
+        "mac-dist": "electron-builder --mac",
+        "dist": "electron-builder"
     },
-    "win": {
-      "icon": "build/icon.ico",
-      "target": [
-        {
-          "target": "nsis",
-          "arch": [
-            "x64",
-            "ia32"
-          ]
+    "build": {
+        "appId": "tw.music.streamer",
+        "mac": {
+            "category": "your.app.category.type"
+        },
+        "linux": {
+            "target": "deb",
+            "icon": "build/icon.png"
+        },
+        "win": {
+            "icon": "build/icon.ico",
+            "target": [{
+                "target": "nsis",
+                "arch": [
+                    "x64",
+                    "ia32"
+                ]
+            }]
         }
-      ]
+    },
+    "devDependencies": {
+        "electron": "latest",
+        "electron-builder": "^22.7.0",
+        "electron-builder-squirrel-windows": "^22.7.0"
+    },
+    "dependencies": {
+        "discord-rich-presence": "0.0.8",
+        "material-design-lite": "^1.3.0"
     }
-  },
-  "devDependencies": {
-    "electron": "latest",
-    "electron-builder": "^22.7.0",
-    "electron-builder-squirrel-windows": "^22.7.0"
-  },
-  "dependencies": {
-    "discord-rich-presence": "0.0.8",
-    "material-design-lite": "^1.3.0"
-  }
 }
