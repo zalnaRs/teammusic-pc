@@ -5,19 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeamMusic PC</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./node_modules/material-design-lite/material.min.css">
+    <script src="./node_modules/material-design-lite/material.min.js"></script>
+    <link rel="stylesheet" href="./assets/materialcolor2.css">
 </head>
 
 <body>
     <div class="menu">
-        <a class="ripple button" onclick="goTo('license.html')">License</a>
+
+        <a class="ripple button" onclick="goTo('./assets/license.html')">License</a>
         <a class="ripple button" onclick="load('http://teammusic.web.app/music.html')">Libary</a>
-        <a class="ripple button">Favorites</a>
-        <a class="ripple button" href="license.html">Playlists</a>
-        <a class="ripple button" href="settings.html">Settings</a>
+        <a class="ripple button" onclick="snackbar('Coming soon...')">Favorites</a>
+        <a class="ripple button" onclick="snackbar('Coming soon...')">Playlists</a>
+        <a class="ripple button" href="./pages/settings.html">Settings</a>
     </div>
     <div class="content">
         <webview class="webview" id="web" src="http://teammusic.web.app/music.html"></webview>
+    </div>
+    <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+        <div class="mdl-snackbar__text"></div>
+        <button class="mdl-snackbar__action" type="button"></button>
     </div>
     <script src="app.js"></script>
 </body>

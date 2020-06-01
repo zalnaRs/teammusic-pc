@@ -7,38 +7,20 @@
     <title>TeamMusic PC</title>
     <link rel="stylesheet" href="./node_modules/material-design-lite/material.min.css">
     <script src="./node_modules/material-design-lite/material.min.js"></script>
-    <link rel="stylesheet" href="materialcolor2.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/materialcolor2.css">
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 
 <body>
-    <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'tab 1')">tab 1</button>
-        <button class="tablinks" onclick="openTab(event, 'tab 2')">tab 2</button>
-        <button class="tablinks" onclick="openTab(event, 'About')">About</button>
-    </div>
-    <div id="tab 1" class="tabcontent">
-        <h3>London</h3>
-        <p>London is the capital city of England.</p>
-    </div>
 
-    <div id="tab 2" class="tabcontent">
-        <h3>Paris</h3>
-        <p>Paris is the capital of France.</p>
-    </div>
-
-    <div id="About" class="tabcontent">
-
-        <img src="./assets/favicon.png" style="margin-bottom: 30px;" width="100px" height="100px">
-        <p style="color: aqua; font-weight: 200; font-size: 20px;">TeamMusic</p>
-        <p>TeamMusic is the best music streaming service built by TeamWorks DEV.</p>
-        <p>Desktop client created by: zalnaRs</p>
-        <button style="background-color: transparent;" onclick="github()"><img src="./assets/github.png" width="50px" height="50px"></button>
-        <p>0.0.1-BETA</p>
-        <p>2020_5_30</p>
-        <p id="os"></p>
-
-    </div>
+    <img src="./assets/favicon.png" style="margin-bottom: 30px;" width="100px" height="100px">
+    <p style="color: aqua; font-weight: 200; font-size: 20px;">TeamMusic</p>
+    <p>TeamMusic is the best music streaming service built by TeamWorks DEV.</p>
+    <p>Desktop client created by: zalnaRs</p>
+    <button style="background-color: transparent;" onclick="github()"><img src="./assets/github.png" width="50px" height="50px"></button>
+    <p>0.0.1-BETA</p>
+    <p>2020_5_30</p>
+    <p id="os"></p>
     <script>
         var os = require('os');
 
