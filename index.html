@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./assets/materialcolor2.css">
 </head>
 
-<body>
+<body style="flex-direction: row;">
     <div class="menu">
 
         <a class="ripple button" onclick="goTo('./assets/license.html')">License</a>
@@ -29,7 +29,14 @@
     </div>
     <div class="player">
         <progress value="50" id="prog"></progress>
+        <span id="music-name">Music name</span>
         <a><img src="./assets/skip_previous-white-18dp.svg" width="50px" height="50px"></a>
+        <a><img src="./assets/play_arrow-white-18dp.svg" width="50px" height="50px"></a>
+        <a><img src="./assets/skip_next-white-18dp.svg" width="50px" height="50px"></a>
+        <hr>
+        <div>
+            <a><img src="./assets/get_app-white-18dp.svg" width="50px" height="50px"></a>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
